@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#4CAF50"/> <!-- Couleur verte quand pressé -->
+    <corners android:radius="8dp"/>
+    <stroke android:width="2dp" android:color="#388E3C"/>
+</shape>

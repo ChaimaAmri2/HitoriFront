@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".RulesActivity">
+
+    <!-- ScrollView qui contient tout le contenu défilable -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Conteneur vertical pour empiler les éléments -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <!-- Titre des règles -->
+            <TextView
+                android:id="@+id/rulesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="EXPLICATION"
+                android:padding="10dp"
+                android:textColor="#777EA5"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:shadowColor="#AA000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="4"/>
+
+            <!-- Texte des règles -->
+            <TextView
+                android:id="@+id/rulesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+android:text="Lorsque vous résolvez un casse_tête Hitori, les règles suivantes s'appliquent :  "/>
+
+            <TextView
+                android:id="@+id/lText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:text="1:Pas de numéro en double dans les rangées et les colonnes. "/>
+
+            <TextView
+                android:id="@+id/l1Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:text="2.éliminer les numéros en les marquant 'gris'. "/>
+
+            <TextView
+                android:id="@+id/l2Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:text=" 3.Les cellules 'grises' ne peuvent pas être adjacentes horizontalement et verticalement. (la diagonale et autorisée). "/>
+
+            <TextView
+                android:id="@+id/l4Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:text="4.Les cellules 'cerclées de noir doivent former un seul élément et ne pas être isolées. "/>
+
+            <TextView
+                android:id="@+id/l5Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:lineSpacingExtra="8dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Le premier clique sur le champ ajoutera un cercle pour marquer la cellule comme correcte (un cercle apparaîtra autour de membre), un deuxième clic rendra la cellule 'grise 'un troisième clic rendra la cellule 'blanche' à nouveau. "/>
+
+            <TextView
+                android:id="@+id/e1Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Etape 1 "/>
+            <TextView
+                android:id="@+id/e11Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="Voici le début du casse-tête. "/>
+            <ImageView
+                android:id="@+id/b1Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i1"
+                android:alpha="0.7" />
+
+
+            <TextView
+                android:id="@+id/e2Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="Etape 2 "/>
+            <TextView
+                android:id="@+id/e22Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Comme un seul '3' est autorisé dans la colonne 4, l'un de ces carrés doit être 'gris'. Quel qu'il soit, le caréré situé entre les deux doit être 'cervlé de noir'  "/>
+            <ImageView
+                android:id="@+id/b2Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i2"
+                android:alpha="0.7" />
+
+
+            <TextView
+                android:id="@+id/e3Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="Etape 3 "/>
+            <TextView
+                android:id="@+id/e33Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Comme vous avez maintenant trouvé un '5' dans la coulonne 4, tous les autres '5' de la même ligne ou colonne doivent être 'gris'. "/>
+            <ImageView
+                android:id="@+id/b3Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i3"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/e4Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="Etape 4 "/>
+            <TextView
+                android:id="@+id/e44Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Toutes les cases entourant une case 'grise' doivent être 'cerclées de noir'. "/>
+            <ImageView
+                android:id="@+id/b4Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i4"
+                android:alpha="0.7" />
+
+
+            <TextView
+                android:id="@+id/e5Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="Etape 5 "/>
+            <TextView
+                android:id="@+id/e55Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Il ya un '3' dans la colonne 3, donc cette case est 'grise (et celles qui l'entourent 'cerclées de noir'). "/>
+            <ImageView
+                android:id="@+id/b5Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i5"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/e6Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="Etape 6 "/>
+            <TextView
+                android:id="@+id/e66Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Ce carré est 'gris' car il y a déja un '3' dans la colonne 4 "/>
+            <ImageView
+                android:id="@+id/b6Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i6"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/e7Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="Etape 7 "/>
+            <TextView
+                android:id="@+id/e77Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Il n'est pas permis d'avoir des carrés isolés 'cerclés de noir'. Ce carée doit donc être 'cerclés de noir' pour éviter que le '5' du coin ne soit isolé"/>
+            <ImageView
+                android:id="@+id/b7Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i7"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/e8Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="Etape 8"/>
+            <TextView
+                android:id="@+id/e88Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Il y a déja un '1' dans la colonne 5, donc ce carré doit être 'gris'. "/>
+            <ImageView
+                android:id="@+id/b8Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i8"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/e9Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="Etape 9 "/>
+            <TextView
+                android:id="@+id/e99Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Ces carrés doivent être 'cerclés de noir' pour éviter les carrés isolés 'cerclés de noir'. "/>
+            <ImageView
+                android:id="@+id/b9Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i9"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/e10Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                android:layout_marginTop="20dp"
+                android:text="Etape 10 "/>
+            <TextView
+                android:id="@+id/e1010Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Ces carrés sont 'gris' car il y a déja un '4' dans la rangée 3, et un '3' dans la colonne 2 "/>
+            <ImageView
+                android:id="@+id/b10Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i10"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/e111Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                android:layout_marginTop="20dp"
+                android:text="Etape 11 "/>
+            <TextView
+                android:id="@+id/e1111Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Ce carré doit être 'cerclé de noir' pour éviter que la section inférieure 'cerclée de noir' ne soit isolée."/>
+            <ImageView
+                android:id="@+id/b11Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i11"
+                android:alpha="0.7" />
+            <TextView
+                android:id="@+id/e12Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                android:layout_marginTop="20dp"
+                android:text="Etape 12 "/>
+            <TextView
+                android:id="@+id/e1212Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Cette case doit être 'entourée de noir' car il y a déja un '1' dans la colonne 2, et le casse-tête est maintenant résolu."/>
+            <ImageView
+                android:id="@+id/b12Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i12"
+                android:alpha="0.7" />
+            <TextView
+                android:id="@+id/e13Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="Etape 13 "/>
+            <TextView
+                android:id="@+id/e1313Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="Le casse-tête terminé. "/>
+            <ImageView
+                android:id="@+id/b13Image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i13"
+                android:alpha="0.7" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="280dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Retour"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_normal"
+                android:gravity="center"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

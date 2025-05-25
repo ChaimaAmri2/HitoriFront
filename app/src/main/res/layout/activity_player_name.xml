@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".PlayerNameActivity">
+
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Bienvenue"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:shadowColor="#AA000000"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="8" />
+    <!-- Conteneur avec coins arrondis en haut -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/container_background"
+        android:padding="40dp">
+
+        <!-- Titre général -->
+
+
+        <!-- Label prénom -->
+        <TextView
+            android:id="@+id/firstNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Prénom"
+            android:textColor="#777EA5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Champ prénom -->
+        <EditText
+            android:id="@+id/firstNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/firstNameLabel"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Entrez votre prénom"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#80594D4D"
+            android:textSize="18sp" />
+
+        <!-- Label nom -->
+        <TextView
+            android:id="@+id/lastNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstNameEditText"
+            android:layout_marginTop="20dp"
+            android:text="Nom"
+            android:textColor="#777EA5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Champ nom -->
+        <EditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/lastNameLabel"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Entrez votre nom"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#80594D4D"
+            android:textSize="18sp" />
+
+        <!-- Bouton Start -->
+        <Button
+            android:id="@+id/startGameButton"
+            style="@style/ShadowButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/lastNameEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="START GAME"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</FrameLayout>

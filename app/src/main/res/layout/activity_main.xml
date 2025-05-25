@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img"
+        android:contentDescription="background"
+        android:alpha="0.7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="HITORI GAME"
+            android:textColor="#777EA5"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:shadowColor="#AA000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp">
+
+            <!-- Première ligne de boutons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btn5x5"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="5×5"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center|end"
+                    android:paddingEnd="12dp"/>
+
+                <Button
+                    android:id="@+id/btn6x6"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="6×6"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center|end"
+                    android:paddingEnd="12dp"/>
+            </LinearLayout>
+
+            <!-- Deuxième ligne de boutons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btn7x7"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="7×7"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center|end"
+                    android:paddingEnd="12dp"/>
+
+                <Button
+                    android:id="@+id/btn8x8"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="8×8"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center|end"
+                    android:paddingEnd="12dp"/>
+            </LinearLayout>
+
+            <!-- Bouton Jouer -->
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="280dp"
+                android:layout_height="70dp"
+                android:text="▶ Jouer"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_normal"
+                android:gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <!-- Bouton Règles -->
+            <Button
+                android:id="@+id/rulesButton"
+                android:layout_width="280dp"
+                android:layout_height="70dp"
+                android:text="📜 Règles"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_normal"
+                android:gravity="center"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

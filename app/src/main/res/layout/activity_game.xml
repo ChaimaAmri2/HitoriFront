@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/board_background"
+    tools:context=".GameActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <!-- En-tête compact -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/gameTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HITORI"
+                android:textColor="#777EA5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/clicksText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Clicks: 0"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="00:00"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/headerLayout"
+            android:background="#CCCCCC"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Message de bienvenue compact -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:textColor="#777EA5"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Grille optimisée avec plus d'espace -->
+        <TableLayout
+            android:id="@+id/gameGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeText"
+            android:layout_above="@id/buttonsLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:divider="@drawable/grid_divider" />
+
+        <!-- Boutons Undo/Redo compacts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/buttonsLayout"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnUndo"
+                style="@style/CircleButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:text="←"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnRedo"
+                style="@style/CircleButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="→"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Boutons principaux compacts -->
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/checkButton"
+                style="@style/ShadowButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="CHECK"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/aff"
+                style="@style/ShadowButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="afficher "
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/menuButton"
+                style="@style/ShadowButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="MENU"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

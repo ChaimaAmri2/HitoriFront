@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style de base pour l'application -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Désactive le "tint" automatique des boutons -->
+        <item name="colorButtonNormal">@null</item>
+        <item name="android:colorButtonNormal">@null</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Style personnalisé pour les boutons avec ombre -->
+    <style name="ShadowButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:background">@drawable/button_selector</item>
+    </style>
+
+    <!-- Style pour les boutons sélectionnés -->
+    <style name="ShadowButton.Selected" parent="ShadowButton">
+        <item name="android:background">@drawable/shadow_button_pressed</item>
+    </style>
+    <style name="CircleButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_circle</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+</resources>
